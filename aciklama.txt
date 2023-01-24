@@ -1,0 +1,20 @@
+config json da hangi ayar ne işe yarıyor buradan öğrenebilirsiniz
+mod: zil programın modunu belirtir.3 adet mod vardır.normal,kamp,serbest
+    normal: program veritabanından o günün tablosunundan saatleri otomatik olarak çeker ve vakti geldiğinde zil çalışır
+    kamp: program veritabanından güne bakmadan direkt kamp tablosundan otomatik olarak çeker ve vakti geldiğinde zil çalışır
+    serbest:program veritabanından veri çekmez tamamen web panel üzerinden yönetilir.
+sifre:programın web paneli yetkisiz girişleri engellemek amacıyla şifreli olarak tasarlanmıştır.panelin şifresi burada yazmaktadır.
+zil_ogrenci_giris_adi: öğrenci giriş zili dosyasının ismini yazınız.
+zil_ogrenci_giris_toplam_uzunluk: öğrenci giriş zilinin saniye cinsinden uzunluğunu yazınız.
+zil_ogretmen_giris_adi: öğretmen giriş zili dosyasının ismini yazınız.
+zil_ogretmen_giris_toplam_uzunluk: öğretmen giriş zilinin saniye cinsinden uzunluğunu yazınız
+zil_ogrenci_cikis_adi:öğrenci çıkış zili dosyasının ismini yazınız.
+zil_ogrenci_cikis_adi_toplam_uzunluk:öğrenci çıkış zilinin saniye cinsinden uzunluğunu yazınız.
+port:burayı değiştirmenizi önermem.panelin çalışacağı port u belirliyor.önerim: Zorunda olmadıkça değiştirmeyin!
+sqlite_veritabani_adi:programın sqlite veritabanın adını yazınız.
+
+
+veritabanındaki zil türündeki değerler ne demek?
+1-Öğrenci Giriş
+2-Öğretmen Giriş
+3-Öğrenci Çıkış
