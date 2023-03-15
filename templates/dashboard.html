@@ -8,8 +8,9 @@ Kontrol Paneli
 
 
 <hr>
-<a href="/zil_cal_ogrenci_giris/" class="btn btn-primary">Öğrenci Giriş Zili Çal</a>
-<a href="/zil_cal_ogrenci_cikis" class="btn btn-primary">Öğrenci Çıkış Zili Çal</a>
-<a href="/zil_cal_ogretmen_giris" class="btn btn-primary">Öğretmen Zili Çal </a>
+
+<a href="/zil_cal/{{config['zil_ogrenci_giris_adi']}}/{{config['zil_ogrenci_giris_toplam_uzunluk']}}" class="btn btn-primary">Öğrenci Giriş Zili Çal</a>
+<a href="/zil_cal/{{config['zil_ogrenci_cikis_adi']}}/{{config['zil_ogrenci_cikis_adi_toplam_uzunluk']}}" class="btn btn-primary">Öğrenci Çıkış Zili Çal</a>
+<a href="/zil_cal/{{config['zil_ogretmen_giris_adi']}}/{{config['zil_ogretmen_giris_toplam_uzunluk']}}" class="btn btn-primary">Öğretmen Zili Çal </a>
 <a href="/durdur" class="btn btn-danger">Durdur</a>
 {% endblock body %}

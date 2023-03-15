@@ -37,19 +37,20 @@ ses = mixer
 @app.route("/durdur")
 @login_required
 def durdur():
-    try:
-        os.system("taskkill /im wmplayer.exe")
-        return redirect(url_for("dashboard"))
-    except:
-        return "zil Zaten Durmuş"
+    ses.stop()
+    return redirect(url_for("dashboard"))
 
-def zilcal(dosya_adi,süresi):
-    os.system("{}".format(dosya_adi))
-    time.sleep(süresi)
-    try:
-        os.system("taskkill /im wmplayer.exe")
-    except:
-        print("zil zaten durdu...")
+
+@app.route("/zil_cal/<string:dosya_adi>/<string:suresi>/")
+@login_required
+def zilcal(dosya_adi,suresi):
+    ses = mixer.Sound(dosya_adi)
+    ses.play()
+    time.sleep(int(suresi))
+    ses.stop()
+    isim = dosya_adi.strip(".wav")
+    flash("{} Çaldı".format(isim),"success")
+    return redirect(url_for("dashboard"))
 
 @app.route("/")
 def index():
@@ -79,8 +80,12 @@ def login():
 @app.route("/dashboard")
 @login_required
 def dashboard():
-    return render_template("dashboard.html")
+    return render_template("dashboard.html",config = config)
 
+
+"""
+
+GEREKSİZ KOD BLOĞU
 @app.route("/zil_cal_ogrenci_giris")
 @login_required
 def ogrenciziligiris():
@@ -101,6 +106,7 @@ def ogretmenzil():
     zilcal(config["zil_ogretmen_giris_adi"],int(config["zil_ogretmen_giris_toplam_uzunluk"]))
     flash("Öğretmen Giriş Zili Çaldı","success")
     return  redirect(url_for("dashboard"))
+"""
 #haftanın gününü bulma
 def haftanin_gunu():
     gun_no  = datetime.datetime.now().weekday()

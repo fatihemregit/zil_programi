@@ -1,12 +1,12 @@
 {
   "mod": "serbest",
   "sifre": "123456",
-  "zil_ogrenci_giris_adi": "Vestel_Venus_Simon_Zil_Sesi.mp3" ,
-  "zil_ogrenci_giris_toplam_uzunluk": "16",
-  "zil_ogretmen_giris_adi": "ogretmen_giris_zili.mp3",
+  "zil_ogrenci_giris_adi": "ogrenci giris zili.wav" ,
+  "zil_ogrenci_giris_toplam_uzunluk": "17",
+  "zil_ogretmen_giris_adi": "ogretmen giris zili.wav",
   "zil_ogretmen_giris_toplam_uzunluk": "14",
-  "zil_ogrenci_cikis_adi": "ogrenci_cikis_zili.mp3",
-  "zil_ogrenci_cikis_adi_toplam_uzunluk": "32",
+  "zil_ogrenci_cikis_adi": "ogrenci cikis zili.wav",
+  "zil_ogrenci_cikis_adi_toplam_uzunluk": "16",
   "sqlite_veritabani_adi": "veritabani.db",
   "port": "1000"
 }
