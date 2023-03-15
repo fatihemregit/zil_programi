@@ -8,8 +8,13 @@ import threading
 import sqlite3
 import datetime
 import sys
-sys.setrecursionlimit(4000)
+from pygame import mixer
 
+sys.setrecursionlimit(4000)
+mixer.init()
+
+
+#Vestel_Venus_Simon_Zil_Sesi.mp3
 app = Flask(__name__)
 app.secret_key = "zilprogrami"
 
@@ -28,8 +33,7 @@ def login_required(f):
 
 class login_form(Form):
     password = PasswordField("Şifre: ",validators=[validators.DataRequired(message="Lütfen Şifreyi Girin")])
-
-
+ses = mixer
 @app.route("/durdur")
 @login_required
 def durdur():
