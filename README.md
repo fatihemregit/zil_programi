@@ -17,4 +17,8 @@ okulların kullanması amacıyla python programlama dili ile yapılmış zil pro
 sonra `pip install -r r.txt`  
 eğer otomatik kullanılcak ise veritabanı ayarlaması yapılmalıdır.
 # Görseller
-![gorsel_1](screenshots\Screenshot_1.png)
+![gorsel_1](https://github.com/fatihemregit/zil_programi/blob/master/screenshots/Screenshot_1.png)
+![gorsel_2](https://github.com/fatihemregit/zil_programi/blob/master/screenshots/Screenshot_2.png)
+![gorsel_3](https://github.com/fatihemregit/zil_programi/blob/master/screenshots/Screenshot_3.png)
+![gorsel_4](https://github.com/fatihemregit/zil_programi/blob/master/screenshots/Screenshot_4.png)
+![gorsel_5](https://github.com/fatihemregit/zil_programi/blob/master/screenshots/Screenshot_5.png)
