@@ -17,3 +17,4 @@ okulların kullanması amacıyla python programlama dili ile yapılmış zil pro
 sonra `pip install -r r.txt`  
 eğer otomatik kullanılcak ise veritabanı ayarlaması yapılmalıdır.
 # Görseller
+![gorsel_1](screenshots\Screenshot_1.png)
