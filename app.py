@@ -44,6 +44,7 @@ def durdur():
 @app.route("/zil_cal/<string:dosya_adi>/<string:suresi>/")
 @login_required
 def zilcal(dosya_adi,suresi):
+    #uzaktan panel den çalınması için
     ses = mixer.Sound(dosya_adi)
     ses.play()
     time.sleep(int(suresi))
@@ -51,6 +52,15 @@ def zilcal(dosya_adi,suresi):
     isim = dosya_adi.strip(".wav")
     flash("{} Çaldı".format(isim),"success")
     return redirect(url_for("dashboard"))
+def zilcal2(dosya_adi,suresi):
+        #koddan çalınması için
+        ses = mixer.Sound(dosya_adi)
+        ses.play()
+        time.sleep(int(suresi))
+        ses.stop()
+        isim = dosya_adi.strip(".wav")
+
+
 
 @app.route("/")
 def index():
@@ -84,7 +94,6 @@ def dashboard():
 
 
 """
-
 GEREKSİZ KOD BLOĞU
 @app.route("/zil_cal_ogrenci_giris")
 @login_required
@@ -151,11 +160,14 @@ def loop():
             if (str(veri[2]) == str(datetime.datetime.now().hour)) and (str(veri[3]) == str(datetime.datetime.now().minute)) and ( str(datetime.datetime.now().second) == str(00)):
                 print("vakit geldi")
                 if str(veri[1]) == str(1):
-                    zilcal(config["zil_ogrenci_giris_adi"],int(config["zil_ogrenci_giris_toplam_uzunluk"]))
+                    print("metoda gelindi")
+                    zilcal2(config["zil_ogrenci_giris_adi"],int(config["zil_ogrenci_giris_toplam_uzunluk"]))
                 elif str(veri[1]) == str(2):
-                    zilcal(config["zil_ogretmen_giris_adi"],int(config["zil_ogretmen_giris_toplam_uzunluk"]))
+                    print("metoda gelindi")
+                    zilcal2(config["zil_ogretmen_giris_adi"],int(config["zil_ogretmen_giris_toplam_uzunluk"]))
                 elif str(veri[1]) == str(3):
-                    zilcal(config["zil_ogrenci_cikis_adi"],int(config["zil_ogrenci_cikis_adi_toplam_uzunluk"]))
+                    print("metoda gelindi")
+                    zilcal2(config["zil_ogrenci_cikis_adi"],int(config["zil_ogrenci_cikis_adi_toplam_uzunluk"]))
 
 if __name__ == "__main__":
     threading.Thread(target=loop).start()
