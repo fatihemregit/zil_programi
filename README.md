@@ -12,8 +12,8 @@ A bell program made in Python programming language for use in schools.
 + sqlite
 + Html
 ## Setup
-önce `cd zil_programi`  
-sonra `pip install -r r.txt`  
+firstly `cd zil_programi`  
+secondly `pip install -r r.txt`  
 if use automatic,must set a database settings
 
 ## Photos
